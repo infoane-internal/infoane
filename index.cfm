@@ -1,0 +1,1 @@
+<cflocation url="#Application.root#main/login.cfm" addtoken="false">
