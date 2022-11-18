@@ -1,4 +1,4 @@
-<cfinclude template="#Application.root#main/header.cfm" runonce="true" />
+<cfinclude template="/main/header.cfm" runonce="true" />
 
 <cfoutput>
 	<div class="d-flex mx-auto text-center w-50 p-5">
@@ -26,4 +26,4 @@
 	</div>
 </cfoutput>
 
-<cfinclude template="#Application.root#main/footer.cfm" runonce="true" />
+<cfinclude template="/main/footer.cfm" runonce="true" />

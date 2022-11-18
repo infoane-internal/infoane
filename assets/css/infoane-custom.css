@@ -1,6 +1,11 @@
 .text-primary {
 	color: #065A9A !important;
 }
+
 .btn-primary {
 	background-color: #065A9A !important;
+}
+
+#dashboard .dashboard-img {
+	object-fit: cover;
 }

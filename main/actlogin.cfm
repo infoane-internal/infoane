@@ -4,7 +4,7 @@
 	<cfset SESSION.userName 	= user.email />
 	<cfset SESSION.role 		= user.role />
 	<cfset SESSION.userFullName = user.firstName & ' ' & user.lastName />
-	<cflocation url="#APPLICATION.root#main/dashboard.cfm" addtoken="false" />
+	<cflocation url="/main/dashboard.cfm" addtoken="false" />
 <cfelse>
-	<cflocation url="#APPLICATION.root#main/login.cfm" addtoken="false" />
+	<cflocation url="/main/login.cfm" addtoken="false" />
 </cfif>
