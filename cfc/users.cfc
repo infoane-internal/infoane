@@ -1,21 +1,19 @@
 <cfcomponent>
-	<cffunction name="GetUserInfo" returnType="query" access="public">
-		<cfargument name="UserID" required="false" />
-		<cfargument name="Email" required="false" />
-		<cfargument name="PassWord" required="false" />
-		<cfquery name="GetUserInfo">
+	<cffunction name="retrieveUserInfo" returnType="query" access="public">
+		<cfargument name="userID" 	required="false" />
+		<cfargument name="email" 	required="true" />
+		<cfargument name="password" required="true" />
+		
+		<cfquery name="getUserInfo">
 			SELECT * FROM Users
 			WHERE 1 = 1
-			<cfif StructKeyExists(ARGUMENTS, "UserID")>
-				AND UserID = <cfqueryparam value="#ARGUMENTS.UserID#" cfsqltype="cf_sql_integer" />
-			</cfif>
-			<cfif StructKeyExists(ARGUMENTS, "Email")>
-				AND Email = <cfqueryparam value="#ARGUMENTS.Email#" cfsqltype="cf_sql_integer" />
-			</cfif>
-			<cfif StructKeyExists(ARGUMENTS, "PassWord")>
-				AND PassWord = <cfqueryparam value="#ARGUMENTS.PassWord#" cfsqltype="cf_sql_integer" />
+			AND Email = <cfqueryparam value="#ARGUMENTS.email#" cfsqltype="cf_sql_varchar" />
+			AND PassWord = <cfqueryparam value="#ARGUMENTS.password#" cfsqltype="cf_sql_varchar" />
+			<cfif structKeyExists(ARGUMENTS, "UserID")>
+				AND UserID = <cfqueryparam value="#ARGUMENTS.userID#" cfsqltype="cf_sql_integer" />
 			</cfif>
 		</cfquery>
-		<cfreturn GetUserInfo />
+
+		<cfreturn getUserInfo />
 	</cffunction>
 </cfcomponent>
