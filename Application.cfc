@@ -1,4 +1,5 @@
 <cfcomponent output="false">
+	<cfset this.name 			= "InfoaneInternal" />
 	<cfset this.datasource 			= "InfoaneInternal" />
 	<cfset this.applicationTimeout 	= createTimeSpan(1,0,0,0) />
 	<cfset this.clientManagement 	= true />
