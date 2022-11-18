@@ -1,0 +1,14 @@
+CREATE DATABASE infoaneinternal;
+
+CREATE TABLE Users (
+    UserID INT AUTO_INCREMENT,
+    LastName VARCHAR(255),
+    FirstName VARCHAR(255),
+    ROLE VARCHAR(255),
+    PASSWORD VARCHAR(255),
+    Stack VARCHAR(55),
+    Branch VARCHAR(100),
+    PRIMARY KEY (UserID)
+);
+
+ALTER TABLE Users ADD COLUMN Email VARCHAR(255)

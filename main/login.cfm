@@ -2,7 +2,7 @@
 
 <cfoutput>
 	<div class="d-flex mx-auto text-center w-50 p-5">
-		<form method="post" action="" id="loginForm" class="form-horizontal shadow-lg">
+		<form method="post" action="actlogin.cfm" id="loginForm" class="form-horizontal shadow-lg">
 			<div class="row bg-body loginContent p-5">
 				<div class="col-12">
 					<p class="h1 text-primary" align="center">Infoane - Internals</p>
